@@ -184,6 +184,13 @@
                         <color key="backgroundColor" red="0.97647058823529409" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="QBr-hx-8f1"/>
+                    <connections>
+                        <outlet property="bmiValueLabel" destination="WyX-kM-cWK" id="hog-P7-RtW"/>
+                        <outlet property="bodySurfaceAreaLabel" destination="05T-w1-vh4" id="vQ8-Ns-5T8"/>
+                        <outlet property="idealBodyWeightLabel" destination="43V-eh-TRI" id="v2V-z7-s6U"/>
+                        <outlet property="leanBodyWeightLabel" destination="rGB-Fg-yWT" id="lPg-PK-TgT"/>
+                        <outlet property="resultLabel" destination="7Uo-YR-Lew" id="8k5-lx-HRZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v31-An-XKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
