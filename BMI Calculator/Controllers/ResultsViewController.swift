@@ -7,24 +7,30 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController,BMIManagerDelegate{
+class ResultsViewController: UIViewController, BMIManagerDelegate{
 
     @IBOutlet weak var leanBodyWeightLabel: UILabel!
     @IBOutlet weak var idealBodyWeightLabel: UILabel!
     @IBOutlet weak var bodySurfaceAreaLabel: UILabel!
     @IBOutlet weak var bmiValueLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
-    
-    
+
+    var bmiManager = BMIManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bmiManager.delegate = self
 
     }
     
-    func didUpdateBMI(lean: String) {
+    func didUpdateBMI(lean: String, ideal: String, surface: String, bmi: String) {
         print(lean)
-        leanBodyWeightLabel.text = lean
+        print(ideal)
+        print(surface)
+        print(bmi)
     }
 
-
 }
+
+

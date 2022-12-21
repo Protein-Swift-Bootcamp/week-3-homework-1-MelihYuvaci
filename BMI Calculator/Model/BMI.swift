@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
-struct BMI{
-    let color: UIColor
+struct BMI {
+    let color : UIColor
+    let result : String
 }
