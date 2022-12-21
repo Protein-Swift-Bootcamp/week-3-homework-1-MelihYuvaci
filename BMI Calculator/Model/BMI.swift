@@ -7,4 +7,6 @@
 
 import Foundation
 
-
+struct BMI{
+    let color: UIColor
+}

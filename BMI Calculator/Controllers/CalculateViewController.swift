@@ -17,7 +17,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var calculateButton: UIButton!
     
     var selectedIndex = 0
-    var calculatorBrain = CalculatorBrain()
+    var bmiManager = BMIManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +41,11 @@ class CalculateViewController: UIViewController {
         performSegue(withIdentifier: "toResultVC", sender: nil)
         if let gender = genderSegmentedControl.titleForSegment(at: selectedIndex){
             print(gender)
-            calculatorBrain
-            if let height = heightTextField.text{
+            if let height = Int(heightTextField.text!){
                 print(height)
-                if let weight = weightTextField.text{
+                if let weight = Int(weightTextField.text!){
                     print(weight)
-                    
+                    bmiManager.calculateBMI(gender: gender, weight: weight, height: height)
                 }
             }
             
